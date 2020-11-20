@@ -2,9 +2,10 @@ import string
 import random 
 
 
-def generate_password(nchar: int) -> str:
+def generate_password(nchar: int, text=True, shuffle=True) -> str:
 
-	password: str = "" 
+	password: str = ""
+
 	for e in range(nchar):
 		password = password +  str(random.randint(1,nchar))
 
@@ -22,7 +23,6 @@ def generate_password(nchar: int) -> str:
 
 	return password
 
-password = generate_password(8)
-print(password)password = generate_password(8,True,True)
+password = generate_password(8,True,True)
 print(password)
 
